@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8973CE0C1DB592E600CC3DE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8973CE0B1DB592E600CC3DE4 /* AppDelegate.swift */; };
+		8973CE0E1DB592E600CC3DE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8973CE0D1DB592E600CC3DE4 /* ViewController.swift */; };
+		8973CE111DB592E600CC3DE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8973CE0F1DB592E600CC3DE4 /* Main.storyboard */; };
+		8973CE141DB592E600CC3DE4 /* Gift_Exchange.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8973CE121DB592E600CC3DE4 /* Gift_Exchange.xcdatamodeld */; };
+		8973CE161DB592E600CC3DE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8973CE151DB592E600CC3DE4 /* Assets.xcassets */; };
+		8973CE191DB592E600CC3DE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8973CE171DB592E600CC3DE4 /* LaunchScreen.storyboard */; };
+		8973CE241DB592E600CC3DE4 /* Gift_ExchangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8973CE231DB592E600CC3DE4 /* Gift_ExchangeTests.swift */; };
+		8973CE2F1DB592E600CC3DE4 /* Gift_ExchangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8973CE2E1DB592E600CC3DE4 /* Gift_ExchangeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8973CE201DB592E600CC3DE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8973CE001DB592E600CC3DE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8973CE071DB592E600CC3DE4;
+			remoteInfo = "Gift Exchange";
+		};
+		8973CE2B1DB592E600CC3DE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8973CE001DB592E600CC3DE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8973CE071DB592E600CC3DE4;
+			remoteInfo = "Gift Exchange";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8973CE081DB592E600CC3DE4 /* Gift Exchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gift Exchange.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8973CE0B1DB592E600CC3DE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8973CE0D1DB592E600CC3DE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8973CE101DB592E600CC3DE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8973CE131DB592E600CC3DE4 /* Gift_Exchange.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gift_Exchange.xcdatamodel; sourceTree = "<group>"; };
+		8973CE151DB592E600CC3DE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8973CE181DB592E600CC3DE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8973CE1A1DB592E600CC3DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8973CE1F1DB592E600CC3DE4 /* Gift ExchangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gift ExchangeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8973CE231DB592E600CC3DE4 /* Gift_ExchangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gift_ExchangeTests.swift; sourceTree = "<group>"; };
+		8973CE251DB592E600CC3DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8973CE2A1DB592E600CC3DE4 /* Gift ExchangeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gift ExchangeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8973CE2E1DB592E600CC3DE4 /* Gift_ExchangeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gift_ExchangeUITests.swift; sourceTree = "<group>"; };
+		8973CE301DB592E600CC3DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8973CE051DB592E600CC3DE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8973CE1C1DB592E600CC3DE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8973CE271DB592E600CC3DE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8973CDFF1DB592E600CC3DE4 = {
+			isa = PBXGroup;
+			children = (
+				8973CE0A1DB592E600CC3DE4 /* Gift Exchange */,
+				8973CE221DB592E600CC3DE4 /* Gift ExchangeTests */,
+				8973CE2D1DB592E600CC3DE4 /* Gift ExchangeUITests */,
+				8973CE091DB592E600CC3DE4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8973CE091DB592E600CC3DE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8973CE081DB592E600CC3DE4 /* Gift Exchange.app */,
+				8973CE1F1DB592E600CC3DE4 /* Gift ExchangeTests.xctest */,
+				8973CE2A1DB592E600CC3DE4 /* Gift ExchangeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8973CE0A1DB592E600CC3DE4 /* Gift Exchange */ = {
+			isa = PBXGroup;
+			children = (
+				8973CE0B1DB592E600CC3DE4 /* AppDelegate.swift */,
+				8973CE0D1DB592E600CC3DE4 /* ViewController.swift */,
+				8973CE0F1DB592E600CC3DE4 /* Main.storyboard */,
+				8973CE151DB592E600CC3DE4 /* Assets.xcassets */,
+				8973CE171DB592E600CC3DE4 /* LaunchScreen.storyboard */,
+				8973CE1A1DB592E600CC3DE4 /* Info.plist */,
+				8973CE121DB592E600CC3DE4 /* Gift_Exchange.xcdatamodeld */,
+			);
+			path = "Gift Exchange";
+			sourceTree = "<group>";
+		};
+		8973CE221DB592E600CC3DE4 /* Gift ExchangeTests */ = {
+			isa = PBXGroup;
+			children = (
+				8973CE231DB592E600CC3DE4 /* Gift_ExchangeTests.swift */,
+				8973CE251DB592E600CC3DE4 /* Info.plist */,
+			);
+			path = "Gift ExchangeTests";
+			sourceTree = "<group>";
+		};
+		8973CE2D1DB592E600CC3DE4 /* Gift ExchangeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8973CE2E1DB592E600CC3DE4 /* Gift_ExchangeUITests.swift */,
+				8973CE301DB592E600CC3DE4 /* Info.plist */,
+			);
+			path = "Gift ExchangeUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8973CE071DB592E600CC3DE4 /* Gift Exchange */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8973CE331DB592E600CC3DE4 /* Build configuration list for PBXNativeTarget "Gift Exchange" */;
+			buildPhases = (
+				8973CE041DB592E600CC3DE4 /* Sources */,
+				8973CE051DB592E600CC3DE4 /* Frameworks */,
+				8973CE061DB592E600CC3DE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gift Exchange";
+			productName = "Gift Exchange";
+			productReference = 8973CE081DB592E600CC3DE4 /* Gift Exchange.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8973CE1E1DB592E600CC3DE4 /* Gift ExchangeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8973CE361DB592E600CC3DE4 /* Build configuration list for PBXNativeTarget "Gift ExchangeTests" */;
+			buildPhases = (
+				8973CE1B1DB592E600CC3DE4 /* Sources */,
+				8973CE1C1DB592E600CC3DE4 /* Frameworks */,
+				8973CE1D1DB592E600CC3DE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8973CE211DB592E600CC3DE4 /* PBXTargetDependency */,
+			);
+			name = "Gift ExchangeTests";
+			productName = "Gift ExchangeTests";
+			productReference = 8973CE1F1DB592E600CC3DE4 /* Gift ExchangeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8973CE291DB592E600CC3DE4 /* Gift ExchangeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8973CE391DB592E600CC3DE4 /* Build configuration list for PBXNativeTarget "Gift ExchangeUITests" */;
+			buildPhases = (
+				8973CE261DB592E600CC3DE4 /* Sources */,
+				8973CE271DB592E600CC3DE4 /* Frameworks */,
+				8973CE281DB592E600CC3DE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8973CE2C1DB592E600CC3DE4 /* PBXTargetDependency */,
+			);
+			name = "Gift ExchangeUITests";
+			productName = "Gift ExchangeUITests";
+			productReference = 8973CE2A1DB592E600CC3DE4 /* Gift ExchangeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8973CE001DB592E600CC3DE4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Willis Programming";
+				TargetAttributes = {
+					8973CE071DB592E600CC3DE4 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					8973CE1E1DB592E600CC3DE4 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8973CE071DB592E600CC3DE4;
+					};
+					8973CE291DB592E600CC3DE4 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8973CE071DB592E600CC3DE4;
+					};
+				};
+			};
+			buildConfigurationList = 8973CE031DB592E600CC3DE4 /* Build configuration list for PBXProject "Gift Exchange" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8973CDFF1DB592E600CC3DE4;
+			productRefGroup = 8973CE091DB592E600CC3DE4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8973CE071DB592E600CC3DE4 /* Gift Exchange */,
+				8973CE1E1DB592E600CC3DE4 /* Gift ExchangeTests */,
+				8973CE291DB592E600CC3DE4 /* Gift ExchangeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8973CE061DB592E600CC3DE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8973CE191DB592E600CC3DE4 /* LaunchScreen.storyboard in Resources */,
+				8973CE161DB592E600CC3DE4 /* Assets.xcassets in Resources */,
+				8973CE111DB592E600CC3DE4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8973CE1D1DB592E600CC3DE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8973CE281DB592E600CC3DE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8973CE041DB592E600CC3DE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8973CE0E1DB592E600CC3DE4 /* ViewController.swift in Sources */,
+				8973CE0C1DB592E600CC3DE4 /* AppDelegate.swift in Sources */,
+				8973CE141DB592E600CC3DE4 /* Gift_Exchange.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8973CE1B1DB592E600CC3DE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8973CE241DB592E600CC3DE4 /* Gift_ExchangeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8973CE261DB592E600CC3DE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8973CE2F1DB592E600CC3DE4 /* Gift_ExchangeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8973CE211DB592E600CC3DE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8973CE071DB592E600CC3DE4 /* Gift Exchange */;
+			targetProxy = 8973CE201DB592E600CC3DE4 /* PBXContainerItemProxy */;
+		};
+		8973CE2C1DB592E600CC3DE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8973CE071DB592E600CC3DE4 /* Gift Exchange */;
+			targetProxy = 8973CE2B1DB592E600CC3DE4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8973CE0F1DB592E600CC3DE4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8973CE101DB592E600CC3DE4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8973CE171DB592E600CC3DE4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8973CE181DB592E600CC3DE4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8973CE311DB592E600CC3DE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8973CE321DB592E600CC3DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8973CE341DB592E600CC3DE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Gift Exchange/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.WillisProgramming.Gift-Exchange";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8973CE351DB592E600CC3DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Gift Exchange/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.WillisProgramming.Gift-Exchange";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		8973CE371DB592E600CC3DE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Gift ExchangeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.WillisProgramming.Gift-ExchangeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gift Exchange.app/Gift Exchange";
+			};
+			name = Debug;
+		};
+		8973CE381DB592E600CC3DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Gift ExchangeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.WillisProgramming.Gift-ExchangeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gift Exchange.app/Gift Exchange";
+			};
+			name = Release;
+		};
+		8973CE3A1DB592E600CC3DE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Gift ExchangeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.WillisProgramming.Gift-ExchangeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Gift Exchange";
+			};
+			name = Debug;
+		};
+		8973CE3B1DB592E600CC3DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Gift ExchangeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.WillisProgramming.Gift-ExchangeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Gift Exchange";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8973CE031DB592E600CC3DE4 /* Build configuration list for PBXProject "Gift Exchange" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8973CE311DB592E600CC3DE4 /* Debug */,
+				8973CE321DB592E600CC3DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8973CE331DB592E600CC3DE4 /* Build configuration list for PBXNativeTarget "Gift Exchange" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8973CE341DB592E600CC3DE4 /* Debug */,
+				8973CE351DB592E600CC3DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8973CE361DB592E600CC3DE4 /* Build configuration list for PBXNativeTarget "Gift ExchangeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8973CE371DB592E600CC3DE4 /* Debug */,
+				8973CE381DB592E600CC3DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8973CE391DB592E600CC3DE4 /* Build configuration list for PBXNativeTarget "Gift ExchangeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8973CE3A1DB592E600CC3DE4 /* Debug */,
+				8973CE3B1DB592E600CC3DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8973CE121DB592E600CC3DE4 /* Gift_Exchange.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8973CE131DB592E600CC3DE4 /* Gift_Exchange.xcdatamodel */,
+			);
+			currentVersion = 8973CE131DB592E600CC3DE4 /* Gift_Exchange.xcdatamodel */;
+			path = Gift_Exchange.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8973CE001DB592E600CC3DE4 /* Project object */;
+}
