@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var randomizeButton: UIButton!
     @IBOutlet weak var addMoreButton: UIButton!
+    @IBOutlet weak var startOverButton: UIButton!
     
     //MARK: - Variables
     var namesEntered = [String]()
@@ -51,6 +52,10 @@ class ViewController: UIViewController {
 
     @IBAction func addMoreButtonPressed(_ sender: AnyObject) {
     
+    }
+    
+    @IBAction func startOverButtonPressed(_ sender: AnyObject) {
+        resetEverything()
     }
     
     func putNamesInArray()  {
@@ -169,8 +174,8 @@ class ViewController: UIViewController {
     
     func showResults() {
         resultsLabel.isHidden = false
-        resultsLabel.sizeToFit()
         resultsLabel.text = results
+//        resultsLabel.lineBreakMode = 
         enterYourNameImage.isHidden = true
         textField1.isHidden = true
         textField2.isHidden = true
@@ -184,6 +189,30 @@ class ViewController: UIViewController {
         textField10.isHidden = true
         randomizeButton.isHidden = true
         addMoreButton.isHidden = true
+        startOverButton.isHidden = false
+    }
+    
+    func resetEverything() {
+        resultsLabel.isHidden = true
+        resultsLabel.text = ""
+        enterYourNameImage.isHidden = false
+        textField1.isHidden = false
+        textField2.isHidden = false
+        textField3.isHidden = false
+        textField4.isHidden = false
+        textField5.isHidden = false
+        textField6.isHidden = false
+        textField7.isHidden = false
+        textField8.isHidden = false
+        textField9.isHidden = false
+        textField10.isHidden = false
+        randomizeButton.isHidden = false
+        addMoreButton.isHidden = false
+        startOverButton.isHidden = true
+        
+        namesEntered = []
+        namesArray = []
+        results = ""
     }
 }
 

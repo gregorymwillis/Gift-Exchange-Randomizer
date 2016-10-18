@@ -130,14 +130,25 @@
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcz-YE-MHg" userLabel="resultsLabel">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcz-YE-MHg" userLabel="resultsLabel">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="375" id="zz5-2q-DAb"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                        <color key="textColor" red="0.99955505132675171" green="0.0046750735491514206" blue="0.0062916516326367855" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <color key="textColor" red="0.92320352157360408" green="0.0090062090108961722" blue="0.01764943280088287" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="-1" height="-1"/>
                                     </label>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTX-xo-pfc" userLabel="startOverButton">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Q3v-fj-jZJ"/>
+                                        </constraints>
+                                        <state key="normal" image="startOverButtonImage"/>
+                                        <connections>
+                                            <action selector="startOverButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pdJ-Oz-FXq"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="R0z-Pz-Yhi" firstAttribute="top" secondItem="f7w-KU-wos" secondAttribute="bottom" constant="8" symbolic="YES" id="1ES-nW-6WX"/>
@@ -147,6 +158,7 @@
                                     <constraint firstItem="dQR-Gd-Res" firstAttribute="centerX" secondItem="FtV-Mq-TRQ" secondAttribute="centerX" id="4kM-eO-rsD"/>
                                     <constraint firstItem="xbh-au-oLw" firstAttribute="top" secondItem="X5i-aQ-2f0" secondAttribute="top" id="6sb-cn-H3P"/>
                                     <constraint firstItem="qcr-gq-y9F" firstAttribute="trailing" secondItem="a40-LH-khn" secondAttribute="trailing" id="7Je-ts-aUK"/>
+                                    <constraint firstItem="XTX-xo-pfc" firstAttribute="bottom" secondItem="xbh-au-oLw" secondAttribute="bottom" id="AjW-4D-RHI"/>
                                     <constraint firstItem="mcz-YE-MHg" firstAttribute="top" secondItem="2Cf-7l-zpE" secondAttribute="bottom" constant="50" id="BlR-gC-J9K"/>
                                     <constraint firstItem="qML-oY-olt" firstAttribute="leading" secondItem="RGd-tm-L2M" secondAttribute="leading" id="E3t-cZ-mXz"/>
                                     <constraint firstItem="DXU-ic-mrQ" firstAttribute="centerX" secondItem="lud-e6-n5I" secondAttribute="centerX" id="EnZ-tO-ig5"/>
@@ -171,6 +183,7 @@
                                     <constraint firstItem="1y0-vQ-1DP" firstAttribute="leading" secondItem="f7w-KU-wos" secondAttribute="leading" id="ciN-iQ-mGr"/>
                                     <constraint firstItem="DXU-ic-mrQ" firstAttribute="leading" secondItem="lud-e6-n5I" secondAttribute="leading" constant="20" id="cpc-nc-C7b"/>
                                     <constraint firstItem="FtV-Mq-TRQ" firstAttribute="leading" secondItem="lud-e6-n5I" secondAttribute="leading" constant="76" id="dTg-9C-V55"/>
+                                    <constraint firstItem="XTX-xo-pfc" firstAttribute="centerX" secondItem="lud-e6-n5I" secondAttribute="centerX" id="e8e-3l-VKY"/>
                                     <constraint firstItem="xbh-au-oLw" firstAttribute="leading" secondItem="lud-e6-n5I" secondAttribute="leading" constant="86" id="gEK-rd-ssy"/>
                                     <constraint firstItem="RGd-tm-L2M" firstAttribute="leading" secondItem="R0z-Pz-Yhi" secondAttribute="leading" id="gd4-pU-jtI"/>
                                     <constraint firstItem="fWV-T3-pQu" firstAttribute="centerX" secondItem="lud-e6-n5I" secondAttribute="centerX" id="gzn-Zy-c2t"/>
@@ -189,6 +202,7 @@
                                     <constraint firstItem="dQR-Gd-Res" firstAttribute="top" secondItem="2Cf-7l-zpE" secondAttribute="bottom" constant="16" id="tTe-HY-KhK"/>
                                     <constraint firstItem="UTy-BD-riL" firstAttribute="leading" secondItem="1y0-vQ-1DP" secondAttribute="leading" id="xJG-C0-CQq"/>
                                     <constraint firstItem="2Cf-7l-zpE" firstAttribute="centerX" secondItem="dQR-Gd-Res" secondAttribute="centerX" id="z6y-nw-DMv"/>
+                                    <constraint firstItem="XTX-xo-pfc" firstAttribute="top" secondItem="xbh-au-oLw" secondAttribute="top" id="zBH-JN-AhC"/>
                                     <constraint firstItem="f7w-KU-wos" firstAttribute="trailing" secondItem="R0z-Pz-Yhi" secondAttribute="trailing" id="zeN-Eg-OTk"/>
                                 </constraints>
                             </scrollView>
@@ -211,6 +225,7 @@
                         <outlet property="enterYourNameImage" destination="dQR-Gd-Res" id="pHx-3i-p2g"/>
                         <outlet property="randomizeButton" destination="xbh-au-oLw" id="e7R-hd-Y7T"/>
                         <outlet property="resultsLabel" destination="mcz-YE-MHg" id="yOJ-xD-9TG"/>
+                        <outlet property="startOverButton" destination="XTX-xo-pfc" id="i08-sh-Kgn"/>
                         <outlet property="textField1" destination="FtV-Mq-TRQ" id="uyd-J1-ETh"/>
                         <outlet property="textField10" destination="qML-oY-olt" id="9PG-Pu-h3D"/>
                         <outlet property="textField2" destination="9jT-US-1md" id="KFP-t1-Eop"/>
@@ -235,5 +250,6 @@
         <image name="SnowflakeBG" width="210" height="222"/>
         <image name="addMoreButtonImage" width="300" height="150"/>
         <image name="randomizeButtonImage" width="300" height="150"/>
+        <image name="startOverButtonImage" width="300" height="150"/>
     </resources>
 </document>
