@@ -32,6 +32,7 @@ class ViewController: UIViewController {
     var namesArray = [String]()
     var results: String = ""
     var index = Int()
+    var textInTextFieldCount: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +52,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func addMoreButtonPressed(_ sender: AnyObject) {
-    
+        putNamesInArray()
     }
     
     @IBAction func startOverButtonPressed(_ sender: AnyObject) {
@@ -62,14 +63,13 @@ class ViewController: UIViewController {
         if let textField1Text = textField1.text {
             if textField1.hasText {
                 namesEntered.append(textField1Text)
-                textField1.text = ""
-            } 
+                textInTextFieldCount += 1
+            }
         }
         
         if let textField2Text = textField2.text {
             if textField2.hasText {
                 namesEntered.append(textField2Text)
-                textField2.text = ""
             }
             
         }
@@ -77,59 +77,51 @@ class ViewController: UIViewController {
         if let textField3Text = textField3.text {
             if textField3.hasText {
                 namesEntered.append(textField3Text)
-                textField3.text = ""
             }
         }
         
         if let textField4Text = textField4.text {
             if textField4.hasText {
                 namesEntered.append(textField4Text)
-                textField4.text = ""
             }
         }
         
         if let textField5Text = textField5.text {
             if textField5.hasText {
                 namesEntered.append(textField5Text)
-                textField5.text = ""
             }
         }
         
         if let textField6Text = textField6.text {
             if textField6.hasText {
                 namesEntered.append(textField6Text)
-                textField6.text = ""
             }
         }
         
         if let textField7Text = textField7.text {
             if textField7.hasText {
                 namesEntered.append(textField7Text)
-                textField7.text = ""
             }
         }
         
         if let textField8Text = textField8.text {
             if textField8.hasText {
                 namesEntered.append(textField8Text)
-                textField8.text = ""
             }
         }
         
         if let textField9Text = textField9.text {
             if textField9.hasText {
                 namesEntered.append(textField9Text)
-                textField9.text = ""
             }
         }
         
         if let textField10Text = textField10.text {
             if textField10.hasText {
                 namesEntered.append(textField10Text)
-                textField10.text = ""
             }
         }
-        
+        clearTextFields()
         namesArray = namesEntered
         
         print(namesEntered)
@@ -175,7 +167,8 @@ class ViewController: UIViewController {
     func showResults() {
         resultsLabel.isHidden = false
         resultsLabel.text = results
-//        resultsLabel.lineBreakMode = 
+        resultsLabel.numberOfLines = 0
+        resultsLabel.sizeToFit()
         enterYourNameImage.isHidden = true
         textField1.isHidden = true
         textField2.isHidden = true
@@ -213,6 +206,48 @@ class ViewController: UIViewController {
         namesEntered = []
         namesArray = []
         results = ""
+        textInTextFieldCount = 0
     }
+    
+    func clearTextFields() {
+        textField1.text = ""
+        textField2.text = ""
+        textField3.text = ""
+        textField4.text = ""
+        textField5.text = ""
+        textField6.text = ""
+        textField7.text = ""
+        textField8.text = ""
+        textField9.text = ""
+        textField10.text = ""
+    }
+    
+    func areEntriesValid() -> Bool {
+        if textInTextFieldCount <= 1 {
+            // Pop up warning message
+            return false
+        } else if textInTextFieldCount == 2 {
+            
+        }
+        return true
+    }
+    
+    func areAnyNamesTheSame() -> Bool {
+        for name in namesEntered {
+            var x = 1
+            repeat {
+                if name == namesEntered[x] {
+                    return true
+                }
+                
+                x += 1
+            } while x <= namesEntered.count;
+        }
+        return false
+    }
+    
+// MARK: - TODO - Add protection for case "only one name entered", "two names entered that are the same"
+//    - Fix scroll view to actually scroll
+//    - Correct constraints
 }
 
