@@ -46,8 +46,14 @@ class ViewController: UIViewController {
 
     @IBAction func randomizeButtonPressed(_ sender: AnyObject) {
         putNamesInArray()
-        randomizeNames()
-        showResults()
+        if entriesAreValid() {
+            clearTextFields()
+            randomizeNames()
+            showResults()
+        } else {
+           resetEverything()
+        }
+        
         
     }
 
@@ -70,6 +76,7 @@ class ViewController: UIViewController {
         if let textField2Text = textField2.text {
             if textField2.hasText {
                 namesEntered.append(textField2Text)
+                textInTextFieldCount += 1
             }
             
         }
@@ -77,51 +84,59 @@ class ViewController: UIViewController {
         if let textField3Text = textField3.text {
             if textField3.hasText {
                 namesEntered.append(textField3Text)
+                textInTextFieldCount += 1
             }
         }
         
         if let textField4Text = textField4.text {
             if textField4.hasText {
                 namesEntered.append(textField4Text)
+                textInTextFieldCount += 1
             }
         }
         
         if let textField5Text = textField5.text {
             if textField5.hasText {
                 namesEntered.append(textField5Text)
+                textInTextFieldCount += 1
             }
         }
         
         if let textField6Text = textField6.text {
             if textField6.hasText {
                 namesEntered.append(textField6Text)
+                textInTextFieldCount += 1
             }
         }
         
         if let textField7Text = textField7.text {
             if textField7.hasText {
                 namesEntered.append(textField7Text)
+                textInTextFieldCount += 1
             }
         }
         
         if let textField8Text = textField8.text {
             if textField8.hasText {
                 namesEntered.append(textField8Text)
+                textInTextFieldCount += 1
             }
         }
         
         if let textField9Text = textField9.text {
             if textField9.hasText {
                 namesEntered.append(textField9Text)
+                textInTextFieldCount += 1
             }
         }
         
         if let textField10Text = textField10.text {
             if textField10.hasText {
                 namesEntered.append(textField10Text)
+                textInTextFieldCount += 1
             }
         }
-        clearTextFields()
+        
         namesArray = namesEntered
         
         print(namesEntered)
@@ -222,12 +237,17 @@ class ViewController: UIViewController {
         textField10.text = ""
     }
     
-    func areEntriesValid() -> Bool {
+    func entriesAreValid() -> Bool {
         if textInTextFieldCount <= 1 {
             // Pop up warning message
             return false
-        } else if textInTextFieldCount == 2 {
-            
+        }
+        
+        if textInTextFieldCount == 2 {
+            if areAnyNamesTheSame() {
+                // Pop up warning message
+                return false
+            }
         }
         return true
     }
