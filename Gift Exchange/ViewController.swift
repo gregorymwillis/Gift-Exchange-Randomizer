@@ -153,10 +153,9 @@ class ViewController: UIViewController {
     }
     
     func getRandomName(name: String) -> String {
-        let setName = name
         var randomName = namesArray[getIndex()]
         
-        while namesMatch(name: setName, randomName: randomName) {
+        while name == randomName {
             randomName = getRandomName(name: name)
         }
         return randomName
@@ -169,14 +168,6 @@ class ViewController: UIViewController {
     
     func removeNameFromArray() {
         namesArray.remove(at: index)
-    }
-    
-    func namesMatch(name: String, randomName: String) -> Bool {
-        if name == randomName {
-            return true
-        } else {
-            return false
-        }
     }
     
     func showResults() {
@@ -238,17 +229,15 @@ class ViewController: UIViewController {
     }
     
     func entriesAreValid() -> Bool {
-        if textInTextFieldCount <= 1 {
+        if textInTextFieldCount <= 2 {
             // Pop up warning message
+            let alertController = UIAlertController(title: "Try Again", message: "Three names must be entered", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+                
             return false
         }
         
-        if textInTextFieldCount == 2 {
-            if areAnyNamesTheSame() {
-                // Pop up warning message
-                return false
-            }
-        }
         return true
     }
     
