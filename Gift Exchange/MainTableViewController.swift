@@ -27,6 +27,11 @@ class MainTableViewController: UITableViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(newNameAdded(_:)), name: NSNotification.Name(rawValue: "NewName"), object: nil)
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+    }
+
     // TODO: Keep track of selected cell
 
 }
