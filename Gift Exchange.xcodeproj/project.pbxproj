@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36DA1A801DB9BC4A00928423 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DA1A7F1DB9BC4A00928423 /* MainTableViewController.swift */; };
+		36DA1A831DB9C16F00928423 /* EnterNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DA1A821DB9C16F00928423 /* EnterNameTableViewCell.swift */; };
+		36DA1A851DB9C18900928423 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DA1A841DB9C18900928423 /* NameTableViewCell.swift */; };
 		8973CE0C1DB592E600CC3DE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8973CE0B1DB592E600CC3DE4 /* AppDelegate.swift */; };
 		8973CE0E1DB592E600CC3DE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8973CE0D1DB592E600CC3DE4 /* ViewController.swift */; };
 		8973CE111DB592E600CC3DE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8973CE0F1DB592E600CC3DE4 /* Main.storyboard */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36DA1A7F1DB9BC4A00928423 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		36DA1A821DB9C16F00928423 /* EnterNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterNameTableViewCell.swift; sourceTree = "<group>"; };
+		36DA1A841DB9C18900928423 /* NameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
 		8973CE081DB592E600CC3DE4 /* Gift Exchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gift Exchange.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8973CE0B1DB592E600CC3DE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8973CE0D1DB592E600CC3DE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +82,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36DA1A7E1DB9BC2100928423 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				36DA1A811DB9C15600928423 /* Cells */,
+				36DA1A7F1DB9BC4A00928423 /* MainTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		36DA1A811DB9C15600928423 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				36DA1A821DB9C16F00928423 /* EnterNameTableViewCell.swift */,
+				36DA1A841DB9C18900928423 /* NameTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		8973CDFF1DB592E600CC3DE4 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +123,7 @@
 		8973CE0A1DB592E600CC3DE4 /* Gift Exchange */ = {
 			isa = PBXGroup;
 			children = (
+				36DA1A7E1DB9BC2100928423 /* Controllers */,
 				8973CE0B1DB592E600CC3DE4 /* AppDelegate.swift */,
 				8973CE0D1DB592E600CC3DE4 /* ViewController.swift */,
 				8973CE0F1DB592E600CC3DE4 /* Main.storyboard */,
@@ -262,8 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36DA1A851DB9C18900928423 /* NameTableViewCell.swift in Sources */,
+				36DA1A801DB9BC4A00928423 /* MainTableViewController.swift in Sources */,
 				8973CE0E1DB592E600CC3DE4 /* ViewController.swift in Sources */,
 				8973CE0C1DB592E600CC3DE4 /* AppDelegate.swift in Sources */,
+				36DA1A831DB9C16F00928423 /* EnterNameTableViewCell.swift in Sources */,
 				8973CE141DB592E600CC3DE4 /* Gift_Exchange.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +537,7 @@
 				8973CE351DB592E600CC3DE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8973CE361DB592E600CC3DE4 /* Build configuration list for PBXNativeTarget "Gift ExchangeTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +546,7 @@
 				8973CE381DB592E600CC3DE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8973CE391DB592E600CC3DE4 /* Build configuration list for PBXNativeTarget "Gift ExchangeUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +555,7 @@
 				8973CE3B1DB592E600CC3DE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
