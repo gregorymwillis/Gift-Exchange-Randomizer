@@ -11,7 +11,10 @@ import UIKit
 class MainTableViewController: UITableViewController {
 
     var names = [String]()
-
+    var nameArray = [String]()
+    var results = String()
+    var index = Int()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.estimatedRowHeight = 60
@@ -69,7 +72,7 @@ extension MainTableViewController {
 extension MainTableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -140,5 +143,60 @@ extension MainTableViewController {
         }
         return nil
     }
+    
+    func randomizeNames() {
+        nameArray = names
+        for name in names {
+            let randomName = getRandomName(name: name)
+            results += "\(name) buys for \(randomName) \n"
+            removeNameFromArray()
+        }
+        print(results)
+    }
+    
+    func getRandomName(name: String) -> String {
+        var randomName = nameArray[getIndex()]
+        
+        while name == randomName {
+            randomName = getRandomName(name: name)
+        }
+        return randomName
+    }
 
+    func entriesAreValid() -> Bool {
+        if names.count <= 2 {
+            // Pop up warning message
+            let alertController = UIAlertController(title: "Try Again", message: "Three names must be entered", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+            
+            return false
+        }
+        
+        return true
+    }
+
+    func areAnyNamesTheSame() -> Bool {
+        for name in names {
+            var x = 1
+            repeat {
+                if name == nameArray[x] {
+                    return true
+                }
+                
+                x += 1
+            } while x <= nameArray.count;
+        }
+        return false
+    }
+    
+    func removeNameFromArray() {
+        nameArray.remove(at: index)
+    }
+    
+    
+    func getIndex() -> Int {
+        index = Int(arc4random_uniform(UInt32(nameArray.count)))
+        return index
+    }
 }

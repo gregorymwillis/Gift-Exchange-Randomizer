@@ -18,6 +18,7 @@
 		8973CE191DB592E600CC3DE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8973CE171DB592E600CC3DE4 /* LaunchScreen.storyboard */; };
 		8973CE241DB592E600CC3DE4 /* Gift_ExchangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8973CE231DB592E600CC3DE4 /* Gift_ExchangeTests.swift */; };
 		8973CE2F1DB592E600CC3DE4 /* Gift_ExchangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8973CE2E1DB592E600CC3DE4 /* Gift_ExchangeUITests.swift */; };
+		89ED50F81DCADE6000F191E2 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ED50F71DCADE6000F191E2 /* ButtonTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		8973CE2A1DB592E600CC3DE4 /* Gift ExchangeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gift ExchangeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8973CE2E1DB592E600CC3DE4 /* Gift_ExchangeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gift_ExchangeUITests.swift; sourceTree = "<group>"; };
 		8973CE301DB592E600CC3DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89ED50F71DCADE6000F191E2 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				36DA1A821DB9C16F00928423 /* EnterNameTableViewCell.swift */,
 				36DA1A841DB9C18900928423 /* NameTableViewCell.swift */,
+				89ED50F71DCADE6000F191E2 /* ButtonTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				8973CE0E1DB592E600CC3DE4 /* ViewController.swift in Sources */,
 				8973CE0C1DB592E600CC3DE4 /* AppDelegate.swift in Sources */,
 				36DA1A831DB9C16F00928423 /* EnterNameTableViewCell.swift in Sources */,
+				89ED50F81DCADE6000F191E2 /* ButtonTableViewCell.swift in Sources */,
 				8973CE141DB592E600CC3DE4 /* Gift_Exchange.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
