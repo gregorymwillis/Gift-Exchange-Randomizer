@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "randomizeButtonImage.png",
+      "filename" : "GiftExchangeLogo.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "randomizeButtonImage@2x.png",
+      "filename" : "GiftExchangeLogo@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "randomizeButtonImage@3x.png",
+      "filename" : "GiftExchangeLogo@3x.png",
       "scale" : "3x"
     }
   ],
