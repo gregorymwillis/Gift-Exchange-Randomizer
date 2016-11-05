@@ -111,7 +111,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EnterYourNameLogo" translatesAutoresizingMaskIntoConstraints="NO" id="SzF-gR-4PK">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EnterYourNames" translatesAutoresizingMaskIntoConstraints="NO" id="SzF-gR-4PK">
                                             <rect key="frame" x="72.5" y="16" width="230" height="33"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="33" id="8aj-02-mqn"/>
@@ -392,7 +392,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="EnterYourNameLogo" width="554" height="82"/>
+        <image name="EnterYourNames" width="660" height="118"/>
         <image name="GiftExchangeLogo" width="291" height="92"/>
         <image name="RandomizeBtn" width="592" height="321"/>
         <image name="ResetBtn" width="592" height="321"/>
