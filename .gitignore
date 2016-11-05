@@ -38,6 +38,7 @@ xcuserdata
 
 # Fastlane Exclusions
 fastlane/README.md
+fastlane/test_output/
 fastlane/report.xml
 fastlane/screenshots
 fastlane.log
