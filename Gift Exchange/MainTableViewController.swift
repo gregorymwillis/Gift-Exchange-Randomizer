@@ -10,8 +10,6 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
 
-//    var names = [String]()
-//    var nameArray = [String]()
     var results = String()
     var index = Int()
     
@@ -151,7 +149,7 @@ extension MainTableViewController {
 
 // MARK: - Helper functions
 
-extension MainTableViewController {
+fileprivate extension MainTableViewController {
 
     func registerForListeners() {
         let listenerMap = [
@@ -175,59 +173,4 @@ extension MainTableViewController {
         return IndexPath(row: row, section: 2)
     }
 
-//    func randomizeNames() {
-//        nameArray = names
-//        for name in names {
-//            let randomName = getRandomName(name: name)
-//            results += "\(name) buys for \(randomName) \n"
-//            removeNameFromArray()
-//        }
-//        print(results)
-//    }
-
-//    func getRandomName(name: String) -> String {
-//        var randomName = nameArray[getIndex()]
-//        
-//        while name == randomName {
-//            randomName = getRandomName(name: name)
-//        }
-//        return randomName
-//    }
-
-    func entriesAreValid() -> Bool {
-        if NameManager.shared.getAllNames().count <= 2 {
-            // Pop up warning message
-            let alertController = UIAlertController(title: "Try Again", message: "Three names must be entered", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            present(alertController, animated: true, completion: nil)
-            
-            return false
-        }
-        
-        return true
-    }
-
-    func areAnyNamesTheSame() -> Bool {
-        for name in NameManager.shared.getAllNames() {
-            var x = 1
-            repeat {
-                if name == NameManager.shared.getAllNames()[x] {
-                    return true
-                }
-                
-                x += 1
-            } while x <= NameManager.shared.getAllNames().count;
-        }
-        return false
-    }
-
-//    func removeNameFromArray() {
-//        nameArray.remove(at: index)
-//    }
-
-    
-//    func getIndex() -> Int {
-//        index = Int(arc4random_uniform(UInt32(nameArray.count)))
-//        return index
-//    }
 }

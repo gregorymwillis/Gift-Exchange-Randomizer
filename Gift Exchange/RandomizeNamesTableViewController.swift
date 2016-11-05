@@ -19,6 +19,8 @@ class RandomizeNamesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         randomizeMatchup()
+        tableView.estimatedRowHeight = 60
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     override func viewWillAppear(_ animated: Bool) {
