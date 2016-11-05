@@ -10,8 +10,8 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
 
-    var names = [String]()
-    var nameArray = [String]()
+//    var names = [String]()
+//    var nameArray = [String]()
     var results = String()
     var index = Int()
     
@@ -55,8 +55,7 @@ extension MainTableViewController {
             return
         }
 
-        names.append(name)
-        names = names.sorted()
+        NameManager.shared.add(name: name)
 
         if let indexPath = indexPathForName(name: name) {
             tableView.beginUpdates()
@@ -68,7 +67,7 @@ extension MainTableViewController {
     }
 
     func resetAction(_ notification: NSNotification) {
-        names.removeAll()
+        NameManager.shared.clear()
         tableView.reloadData()
     }
 
@@ -91,7 +90,7 @@ extension MainTableViewController {
             return 1
 
         case 2:
-            return names.count
+            return NameManager.shared.getAllNames().count
 
         case 3:
             return 1
@@ -113,7 +112,7 @@ extension MainTableViewController {
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "NameCell", for: indexPath)
             if let nameCell = cell as? NameTableViewCell {
-                nameCell.name = names[indexPath.row]
+                nameCell.name = NameManager.shared.getAllNames()[indexPath.row]
             }
             return cell
 
@@ -140,7 +139,7 @@ extension MainTableViewController {
 
             tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: .automatic)
-            self.names.remove(at: indexPath.row)
+            NameManager.shared.remove(index: indexPath.row)
             tableView.endUpdates()
 
         }
@@ -169,35 +168,34 @@ extension MainTableViewController {
     }
 
     func indexPathForName(name: String) -> IndexPath? {
-        for i in 0..<names.count {
-            if names[i] == name {
-                return IndexPath(row: i, section: 2)
-            }
+        guard let row = NameManager.shared.row(forName: name) else {
+            return nil
         }
-        return nil
-    }
-    
-    func randomizeNames() {
-        nameArray = names
-        for name in names {
-            let randomName = getRandomName(name: name)
-            results += "\(name) buys for \(randomName) \n"
-            removeNameFromArray()
-        }
-        print(results)
-    }
-    
-    func getRandomName(name: String) -> String {
-        var randomName = nameArray[getIndex()]
-        
-        while name == randomName {
-            randomName = getRandomName(name: name)
-        }
-        return randomName
+
+        return IndexPath(row: row, section: 2)
     }
 
+//    func randomizeNames() {
+//        nameArray = names
+//        for name in names {
+//            let randomName = getRandomName(name: name)
+//            results += "\(name) buys for \(randomName) \n"
+//            removeNameFromArray()
+//        }
+//        print(results)
+//    }
+
+//    func getRandomName(name: String) -> String {
+//        var randomName = nameArray[getIndex()]
+//        
+//        while name == randomName {
+//            randomName = getRandomName(name: name)
+//        }
+//        return randomName
+//    }
+
     func entriesAreValid() -> Bool {
-        if names.count <= 2 {
+        if NameManager.shared.getAllNames().count <= 2 {
             // Pop up warning message
             let alertController = UIAlertController(title: "Try Again", message: "Three names must be entered", preferredStyle: UIAlertControllerStyle.alert)
             alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
@@ -210,26 +208,26 @@ extension MainTableViewController {
     }
 
     func areAnyNamesTheSame() -> Bool {
-        for name in names {
+        for name in NameManager.shared.getAllNames() {
             var x = 1
             repeat {
-                if name == nameArray[x] {
+                if name == NameManager.shared.getAllNames()[x] {
                     return true
                 }
                 
                 x += 1
-            } while x <= nameArray.count;
+            } while x <= NameManager.shared.getAllNames().count;
         }
         return false
     }
+
+//    func removeNameFromArray() {
+//        nameArray.remove(at: index)
+//    }
+
     
-    func removeNameFromArray() {
-        nameArray.remove(at: index)
-    }
-    
-    
-    func getIndex() -> Int {
-        index = Int(arc4random_uniform(UInt32(nameArray.count)))
-        return index
-    }
+//    func getIndex() -> Int {
+//        index = Int(arc4random_uniform(UInt32(nameArray.count)))
+//        return index
+//    }
 }
