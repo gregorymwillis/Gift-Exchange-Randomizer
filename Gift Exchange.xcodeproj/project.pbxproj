@@ -702,7 +702,7 @@
 				DEVELOPMENT_TEAM = UX4EK78427;
 				INFOPLIST_FILE = "Gift Exchange/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.WillisProgramming.Gift-Exchange";
+				PRODUCT_BUNDLE_IDENTIFIER = com.WillisProgramming.GiftExchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -717,7 +717,7 @@
 				DEVELOPMENT_TEAM = UX4EK78427;
 				INFOPLIST_FILE = "Gift Exchange/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.WillisProgramming.Gift-Exchange";
+				PRODUCT_BUNDLE_IDENTIFIER = com.WillisProgramming.GiftExchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
