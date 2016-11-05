@@ -12,6 +12,8 @@
 		36B3F5E21DCD701100EED2D8 /* RandomizeButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B3F5E11DCD701100EED2D8 /* RandomizeButtonTableViewCell.swift */; };
 		36B3F5E51DCD718C00EED2D8 /* NameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B3F5E41DCD718C00EED2D8 /* NameManager.swift */; };
 		36B3F5E81DCD75BD00EED2D8 /* NameManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B3F5E71DCD75BD00EED2D8 /* NameManagerTest.swift */; };
+		36C45E6B1DCE3D6C00E87710 /* MatchupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C45E6A1DCE3D6C00E87710 /* MatchupManager.swift */; };
+		36C45E6D1DCE419F00E87710 /* MatchupManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C45E6C1DCE419F00E87710 /* MatchupManagerTest.swift */; };
 		36DA1A801DB9BC4A00928423 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DA1A7F1DB9BC4A00928423 /* MainTableViewController.swift */; };
 		36DA1A831DB9C16F00928423 /* EnterNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DA1A821DB9C16F00928423 /* EnterNameTableViewCell.swift */; };
 		36DA1A851DB9C18900928423 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DA1A841DB9C18900928423 /* NameTableViewCell.swift */; };
@@ -49,6 +51,8 @@
 		36B3F5E11DCD701100EED2D8 /* RandomizeButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomizeButtonTableViewCell.swift; sourceTree = "<group>"; };
 		36B3F5E41DCD718C00EED2D8 /* NameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameManager.swift; sourceTree = "<group>"; };
 		36B3F5E71DCD75BD00EED2D8 /* NameManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameManagerTest.swift; sourceTree = "<group>"; };
+		36C45E6A1DCE3D6C00E87710 /* MatchupManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchupManager.swift; sourceTree = "<group>"; };
+		36C45E6C1DCE419F00E87710 /* MatchupManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchupManagerTest.swift; sourceTree = "<group>"; };
 		36DA1A7F1DB9BC4A00928423 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		36DA1A821DB9C16F00928423 /* EnterNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterNameTableViewCell.swift; sourceTree = "<group>"; };
 		36DA1A841DB9C18900928423 /* NameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				36B3F5E41DCD718C00EED2D8 /* NameManager.swift */,
+				36C45E6A1DCE3D6C00E87710 /* MatchupManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				36B3F5E71DCD75BD00EED2D8 /* NameManagerTest.swift */,
+				36C45E6C1DCE419F00E87710 /* MatchupManagerTest.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -330,6 +336,7 @@
 				89ED50F81DCADE6000F191E2 /* ButtonTableViewCell.swift in Sources */,
 				36B3F5E01DCD6CD200EED2D8 /* RandomizeNamesTableViewController.swift in Sources */,
 				36B3F5DE1DCD6C6800EED2D8 /* RootViewController.swift in Sources */,
+				36C45E6B1DCE3D6C00E87710 /* MatchupManager.swift in Sources */,
 				36B3F5E51DCD718C00EED2D8 /* NameManager.swift in Sources */,
 				8973CE141DB592E600CC3DE4 /* Gift_Exchange.xcdatamodeld in Sources */,
 				36B3F5E21DCD701100EED2D8 /* RandomizeButtonTableViewCell.swift in Sources */,
@@ -342,6 +349,7 @@
 			files = (
 				36B3F5E81DCD75BD00EED2D8 /* NameManagerTest.swift in Sources */,
 				8973CE241DB592E600CC3DE4 /* Gift_ExchangeTests.swift in Sources */,
+				36C45E6D1DCE419F00E87710 /* MatchupManagerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
