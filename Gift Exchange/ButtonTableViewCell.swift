@@ -10,24 +10,9 @@ import UIKit
 import Foundation
 
 class ButtonTableViewCell: UITableViewCell {
-    
-    @IBOutlet var randomizeBtn: UIButton!
-    @IBOutlet var reDoBtn: UIButton!
-    @IBOutlet var goBackBtn: UIButton!
-    
-    
-    @IBAction func randomizeBtnPressed() {
-    
-    }
-    
-    @IBAction func reDoBtnPressed() {
-        
-    }
-    
-    @IBAction func goBackBtnPressed() {
-        
-    }
-    
-    
+
+    @IBAction func resetButtonPressed() {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ResetAction"), object: nil)
+    }  
     
 }

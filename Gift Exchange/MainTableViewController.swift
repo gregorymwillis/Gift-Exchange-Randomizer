@@ -10,8 +10,8 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
 
-    var names = [String]()
-    var nameArray = [String]()
+//    var names = [String]()
+//    var nameArray = [String]()
     var results = String()
     var index = Int()
     
@@ -27,7 +27,9 @@ class MainTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        NotificationCenter.default.addObserver(self, selector: #selector(newNameAdded(_:)), name: NSNotification.Name(rawValue: "NewName"), object: nil)
+
+        registerForListeners()
+
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -48,13 +50,12 @@ extension MainTableViewController {
             // TODO: Log an error
             return
         }
-        guard let name = userInfo["name"] as? String else {
+        guard let name = userInfo["name"] as? String, name != "" else {
             // TODO: Log an error that there was no name provided back
             return
         }
 
-        names.append(name)
-        names = names.sorted()
+        NameManager.shared.add(name: name)
 
         if let indexPath = indexPathForName(name: name) {
             tableView.beginUpdates()
@@ -63,6 +64,11 @@ extension MainTableViewController {
         } else {
             tableView.reloadData()
         }
+    }
+
+    func resetAction(_ notification: NSNotification) {
+        NameManager.shared.clear()
+        tableView.reloadData()
     }
 
 }
@@ -83,8 +89,14 @@ extension MainTableViewController {
         case 1:
             return 1
 
+        case 2:
+            return NameManager.shared.getAllNames().count
+
+        case 3:
+            return 1
+
         default:
-            return names.count
+            return 0
         }
     }
 
@@ -97,12 +109,18 @@ extension MainTableViewController {
         case 1:
             return tableView.dequeueReusableCell(withIdentifier: "AddNameCell", for: indexPath)
 
-        default:
+        case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "NameCell", for: indexPath)
             if let nameCell = cell as? NameTableViewCell {
-                nameCell.name = names[indexPath.row]
+                nameCell.name = NameManager.shared.getAllNames()[indexPath.row]
             }
             return cell
+
+        case 3:
+            return tableView.dequeueReusableCell(withIdentifier: "ButtonsCell", for: indexPath)
+
+        default:
+            return tableView.dequeueReusableCell(withIdentifier: "", for: indexPath)
         }
     }
 
@@ -121,7 +139,7 @@ extension MainTableViewController {
 
             tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: .automatic)
-            self.names.remove(at: indexPath.row)
+            NameManager.shared.remove(index: indexPath.row)
             tableView.endUpdates()
 
         }
@@ -135,36 +153,49 @@ extension MainTableViewController {
 
 extension MainTableViewController {
 
-    func indexPathForName(name: String) -> IndexPath? {
-        for i in 0..<names.count {
-            if names[i] == name {
-                return IndexPath(row: i, section: 2)
+    func registerForListeners() {
+        let listenerMap = [
+            "NewName": #selector(newNameAdded(_:)),
+            "ResetAction": #selector(resetAction(_:)),
+        ]
+
+        for key in listenerMap.keys {
+            guard let selector = listenerMap[key] else {
+                continue
             }
+            NotificationCenter.default.addObserver(self, selector: selector, name: NSNotification.Name(rawValue: key), object: nil)
         }
-        return nil
-    }
-    
-    func randomizeNames() {
-        nameArray = names
-        for name in names {
-            let randomName = getRandomName(name: name)
-            results += "\(name) buys for \(randomName) \n"
-            removeNameFromArray()
-        }
-        print(results)
-    }
-    
-    func getRandomName(name: String) -> String {
-        var randomName = nameArray[getIndex()]
-        
-        while name == randomName {
-            randomName = getRandomName(name: name)
-        }
-        return randomName
     }
 
+    func indexPathForName(name: String) -> IndexPath? {
+        guard let row = NameManager.shared.row(forName: name) else {
+            return nil
+        }
+
+        return IndexPath(row: row, section: 2)
+    }
+
+//    func randomizeNames() {
+//        nameArray = names
+//        for name in names {
+//            let randomName = getRandomName(name: name)
+//            results += "\(name) buys for \(randomName) \n"
+//            removeNameFromArray()
+//        }
+//        print(results)
+//    }
+
+//    func getRandomName(name: String) -> String {
+//        var randomName = nameArray[getIndex()]
+//        
+//        while name == randomName {
+//            randomName = getRandomName(name: name)
+//        }
+//        return randomName
+//    }
+
     func entriesAreValid() -> Bool {
-        if names.count <= 2 {
+        if NameManager.shared.getAllNames().count <= 2 {
             // Pop up warning message
             let alertController = UIAlertController(title: "Try Again", message: "Three names must be entered", preferredStyle: UIAlertControllerStyle.alert)
             alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
@@ -177,26 +208,26 @@ extension MainTableViewController {
     }
 
     func areAnyNamesTheSame() -> Bool {
-        for name in names {
+        for name in NameManager.shared.getAllNames() {
             var x = 1
             repeat {
-                if name == nameArray[x] {
+                if name == NameManager.shared.getAllNames()[x] {
                     return true
                 }
                 
                 x += 1
-            } while x <= nameArray.count;
+            } while x <= NameManager.shared.getAllNames().count;
         }
         return false
     }
+
+//    func removeNameFromArray() {
+//        nameArray.remove(at: index)
+//    }
+
     
-    func removeNameFromArray() {
-        nameArray.remove(at: index)
-    }
-    
-    
-    func getIndex() -> Int {
-        index = Int(arc4random_uniform(UInt32(nameArray.count)))
-        return index
-    }
+//    func getIndex() -> Int {
+//        index = Int(arc4random_uniform(UInt32(nameArray.count)))
+//        return index
+//    }
 }
