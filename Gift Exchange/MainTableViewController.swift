@@ -27,7 +27,9 @@ class MainTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        NotificationCenter.default.addObserver(self, selector: #selector(newNameAdded(_:)), name: NSNotification.Name(rawValue: "NewName"), object: nil)
+
+        registerForListeners()
+
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -48,7 +50,7 @@ extension MainTableViewController {
             // TODO: Log an error
             return
         }
-        guard let name = userInfo["name"] as? String else {
+        guard let name = userInfo["name"] as? String, name != "" else {
             // TODO: Log an error that there was no name provided back
             return
         }
@@ -63,6 +65,11 @@ extension MainTableViewController {
         } else {
             tableView.reloadData()
         }
+    }
+
+    func resetAction(_ notification: NSNotification) {
+        names.removeAll()
+        tableView.reloadData()
     }
 
 }
@@ -83,8 +90,14 @@ extension MainTableViewController {
         case 1:
             return 1
 
-        default:
+        case 2:
             return names.count
+
+        case 3:
+            return 1
+
+        default:
+            return 0
         }
     }
 
@@ -97,12 +110,18 @@ extension MainTableViewController {
         case 1:
             return tableView.dequeueReusableCell(withIdentifier: "AddNameCell", for: indexPath)
 
-        default:
+        case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "NameCell", for: indexPath)
             if let nameCell = cell as? NameTableViewCell {
                 nameCell.name = names[indexPath.row]
             }
             return cell
+
+        case 3:
+            return tableView.dequeueReusableCell(withIdentifier: "ButtonsCell", for: indexPath)
+
+        default:
+            return tableView.dequeueReusableCell(withIdentifier: "", for: indexPath)
         }
     }
 
@@ -134,6 +153,20 @@ extension MainTableViewController {
 // MARK: - Helper functions
 
 extension MainTableViewController {
+
+    func registerForListeners() {
+        let listenerMap = [
+            "NewName": #selector(newNameAdded(_:)),
+            "ResetAction": #selector(resetAction(_:)),
+        ]
+
+        for key in listenerMap.keys {
+            guard let selector = listenerMap[key] else {
+                continue
+            }
+            NotificationCenter.default.addObserver(self, selector: selector, name: NSNotification.Name(rawValue: key), object: nil)
+        }
+    }
 
     func indexPathForName(name: String) -> IndexPath? {
         for i in 0..<names.count {
