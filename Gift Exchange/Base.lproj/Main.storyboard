@@ -208,10 +208,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wn-7Q-Tdg">
-                                            <rect key="frame" x="8" y="8" width="74" height="40"/>
+                                            <rect key="frame" x="100.5" y="8" width="74" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="afW-sC-9Ze"/>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="mRg-pu-71C"/>
                                                 <constraint firstAttribute="width" constant="74" id="vBs-Qz-UoN"/>
                                             </constraints>
                                             <state key="normal" image="RandomizeBtn"/>
@@ -220,9 +219,8 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ob-jc-gXJ">
-                                            <rect key="frame" x="293" y="8" width="74" height="40"/>
+                                            <rect key="frame" x="200.5" y="8" width="74" height="40"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Gj5-H2-Mxf"/>
                                                 <constraint firstAttribute="width" constant="74" id="jPA-zW-AIG"/>
                                                 <constraint firstAttribute="height" constant="40" id="rRj-ZR-JgK"/>
                                             </constraints>
@@ -234,12 +232,12 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
+                                        <constraint firstItem="7ob-jc-gXJ" firstAttribute="centerX" secondItem="2Fw-n2-Ukr" secondAttribute="centerX" constant="50" id="7EZ-dU-T34"/>
                                         <constraint firstItem="7ob-jc-gXJ" firstAttribute="top" secondItem="2Fw-n2-Ukr" secondAttribute="top" constant="8" id="Bkc-8A-saG"/>
-                                        <constraint firstItem="2wn-7Q-Tdg" firstAttribute="leading" secondItem="2Fw-n2-Ukr" secondAttribute="leading" constant="8" id="BnZ-YL-9us"/>
                                         <constraint firstAttribute="bottom" secondItem="7ob-jc-gXJ" secondAttribute="bottom" constant="8" id="K0W-lb-Zs1"/>
                                         <constraint firstItem="2wn-7Q-Tdg" firstAttribute="top" secondItem="2Fw-n2-Ukr" secondAttribute="top" constant="8" id="Nmq-os-XYa"/>
                                         <constraint firstItem="7ob-jc-gXJ" firstAttribute="centerY" secondItem="2Fw-n2-Ukr" secondAttribute="centerY" id="W4K-Gg-baD"/>
-                                        <constraint firstAttribute="trailing" secondItem="7ob-jc-gXJ" secondAttribute="trailing" constant="8" id="nYl-aR-RY1"/>
+                                        <constraint firstItem="2wn-7Q-Tdg" firstAttribute="centerX" secondItem="2Fw-n2-Ukr" secondAttribute="centerX" constant="-50" id="XPT-B1-r8I"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
