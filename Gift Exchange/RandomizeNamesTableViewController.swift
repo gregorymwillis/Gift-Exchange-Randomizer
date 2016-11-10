@@ -97,12 +97,26 @@ extension RandomizeNamesTableViewController {
 
 fileprivate extension RandomizeNamesTableViewController {
 
-    func randomizeMatchup() {
+     func randomizeMatchup() {
         names = NameManager.shared.getAllNames()
+        guard names.count > 2 else {
+            popUpWarning()
+            return
+        }
         MatchupManager.shared.names = names
         MatchupManager.shared.randomize()
         matchups = MatchupManager.shared.randomMatchup
         tableView.reloadData()
     }
+}
 
+// MARK: - Warning Message
+extension RandomizeNamesTableViewController: UIAlertViewDelegate {
+    
+    func popUpWarning() {
+        // TODO: - Pop up warning to user to enter at least three names
+        let alert = UIAlertController(title: "Sorry", message: "Three names minimum", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
