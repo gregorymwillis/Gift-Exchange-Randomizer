@@ -10,8 +10,6 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
 
-    var results = String()
-    var index = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -146,6 +144,21 @@ extension MainTableViewController {
     }
 
 }
+
+// MARK: - Navigation
+
+extension MainTableViewController {
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        let names = NameManager.shared.getAllNames()
+        var result = false
+        AlertHelper.checkRandomizeMatchup(names: names, parentVC: self) { (success: Bool) in
+            result = success
+        }
+        return result
+    }
+}
+
 
 // MARK: - Helper functions
 
