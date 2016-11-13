@@ -1,5 +1,6 @@
 app_identifier "com.WillisProgramming.GiftExchange" # The bundle identifier of your app
-apple_id "gregorymwillis@gmail.com" # Your Apple email address
+#apple_id "gregorymwillis@gmail.com" # Your Apple email address
+apple_id "intere@gmail.com" # Your Apple email address
 
 team_id "UX4EK78427"  # Developer Portal Team ID
 
